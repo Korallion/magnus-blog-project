@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Magnus Blog</title>
-    <link href="style.css" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Magnus Blog</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="tailwind.css" rel="stylesheet">
 
-  </head>
-  <body class="bg-white">
-    <header class="nav-bar">
-      <a href="" class="btn-nav">Home</a>
-      <a href="" class="btn-nav">Blog Posts</a>
-      <a href="" class="btn-nav">Reviews</a>
-      <a href="" class="btn-nav">About</a>
-    </header>
+</head>
+<body class="bg-gray-800 text-gray-300 text-lg">
+  <header class="nav-bar">
+    <a href="" class="btn-nav">Home</a>
+    <a href="" class="btn-nav">
+      Blog Posts
+      <ul class="list-dropdown">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+      </ul>
+    </a>
+    <a href="" class="btn-nav">Reviews</a>
+    <a href="" class="btn-nav">About</a>
+  </header>
 
-    <div class="intro">
-      <h1 class="">Welcome to the Magnus Blog </h1>
-      <p>
+  <div class="content">
+    <div class="section">
+      <h1 class="section-title">Welcome to the Magnus Blog </h1>
+      <p class="paragraph">
         Here lies the mind-dump of Karl Jakelski, ex-Engineer and ambitious web developer. You'll find blog posts here ranging from philosophy and science to lego and toilet humor. In addition to the blog, there's a section full of reviews for movies, shows, books, and video games.
       </p>
     </div>
 
-    <div>
-      <h2>My Favorite Posts</h2>
+    <div class="section">
+      <h2 class="section-title">My Favorite Posts</h2>
       <ul>
         <li>Stoicism</li>
         <li>Living a Good Life</li>
@@ -31,8 +41,9 @@
         <li>Quatre</li>
       </ul>
     </div>
-    <div>
-      <h2>Recent Posts</h2>
+
+    <div class="section">
+      <h2 class="section-title">Recent Posts</h2>
       <ul>
         <li>Ein</li>
         <li>Zwei</li>
@@ -40,8 +51,9 @@
         <li>Fier</li>
       </ul>
     </div>
-    <div>
-      <h2>Recent Reviews</h2>
+
+    <div class="section">
+      <h2 class="section-title">Recent Reviews</h2>
       <ul>
         <li>The Way of Kings</li>
         <li>Horizon Zero Dawn</li>
@@ -49,11 +61,12 @@
         <li>Black Widow</li>
       </ul>
     </div>
+  </div>
 
 
-    <footer class="footer">
+  <footer class="footer">
 
-    </footer>
+  </footer>
 
-  </body>
+</body>
 </html>
