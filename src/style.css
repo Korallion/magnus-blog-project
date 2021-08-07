@@ -16,7 +16,9 @@
     @apply inline-block mx-0.5 px-4 py-1 rounded;
 
     /* colour */
-    @apply bg-gradient-to-b from-green-800 to-blue-900;
+    @apply bg-gradient-to-b from-green-500 to-blue-900;
+    @apply hover:from-green-800;
+    @apply focus:from-green-700 focus:to-blue-600;
 
     /* text */
     @apply text-xl font-bold;
