@@ -4,7 +4,7 @@
   "description": "A blog project made by a guy trying to learn web-development",
   "main": "index.html",
   "scripts": {
-    "tailwind": "npx tailwindcss build tailwind.css -o style.css",
+    "tailwind": "npx tailwindcss -i src/style.css -o dist/tailwind.css",
     "autoprefixer": "postcss style.css -u autoprefixer --no-map -o style.css",
     "minify": "postcss style.css -u cssnano --no-map -o style.min.css",
     "build": "npm run tailwind && npm run autoprefixer",
@@ -12,5 +12,8 @@
   },
   "keywords": [],
   "author": "KMJ",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^2.2.7"
+  }
 }
