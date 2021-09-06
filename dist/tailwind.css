@@ -638,8 +638,8 @@ video {
   /* size and position */
   position: sticky;
   top: 0px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 24rem;
+  padding-right: 24rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   /* colour and styling */
@@ -649,6 +649,33 @@ video {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.icon {
+  /*size and position */
+  display: inline-block;
+  width: 8.333333%;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
+  /* colour */
+  --tw-bg-opacity: 1;
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+}
+
+.icon:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+}
+
+.icon {
+  /*text */
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
 }
 
 .btn-nav {
@@ -686,37 +713,41 @@ video {
   font-weight: 700;
 }
 
-.list-dropdown {
-  /* size and position */
-  position: absolute;
-  display: none;
-  border-radius: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.search-bar {
+  float: right;
+  display: inline-block;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+}
+
+.wrapper {
+  margin-left: 24rem;
+  margin-right: 24rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.nav-column {
+  /* size and position */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  width: 13rem;
+  flex-shrink: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   /* colour */
   --tw-bg-opacity: 1;
-  background-color: rgba(30, 64, 175, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
 }
 
 .content {
   /* size and position */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  margin: 0.5rem;
 }
 
 .section {
   /* size and position */
-  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
