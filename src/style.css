@@ -5,10 +5,22 @@
 @layer components {
   .nav-bar {
     /* size and position */
-    @apply px-4 py-4 sticky top-0;
+    @apply px-96 py-4 sticky top-0;
 
     /* colour and styling */
     @apply bg-gray-900 text-white shadow-lg;
+  }
+
+  .icon {
+    /*size and position */
+    @apply inline-block w-1/12 px-4 py-1 text-center rounded;
+
+    /* colour */
+    @apply bg-gray-700;
+    @apply hover:bg-gray-600;
+
+    /*text */
+    @apply text-xl font-bold;
   }
 
   .btn-nav {
@@ -16,30 +28,38 @@
     @apply inline-block mx-0.5 px-4 py-1 rounded;
 
     /* colour */
-    @apply bg-gradient-to-b from-green-500 to-blue-900;
-    @apply hover:from-green-800;
-    @apply focus:from-green-700 focus:to-blue-600;
+    @apply bg-gradient-to-b from-gray-600 to-red-900;
+    @apply hover:from-gray-800;
+    @apply focus:from-gray-700 focus:to-red-600;
 
     /* text */
     @apply text-xl font-bold;
   }
 
-  .list-dropdown {
+  .search-bar {
+    @apply inline-block float-right py-1;
+  }
+
+  .wrapper {
+    @apply flex mx-96 mt-4;
+  }
+
+  .nav-column {
     /* size and position */
-    @apply hidden absolute px-4 py-1 text-xl rounded-lg;
+    @apply flex-shrink-0 w-52 my-2 mr-2 px-2;
 
     /* colour */
-    @apply bg-blue-800 text-white;
+    @apply bg-red-900;
   }
 
   .content {
     /* size and position */
-    @apply mx-auto px-16 py-5;
+    @apply m-2;
   }
 
   .section {
     /* size and position */
-    @apply py-4;
+    @apply pb-4;
   }
 
   .section-title {
