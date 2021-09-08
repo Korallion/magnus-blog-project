@@ -11,13 +11,13 @@ fetch(myRequest).then(
     .then(
         function (response) {
 
-            var ul = document.getElementsByClassName('nav-list')
+            const ul = document.getElementsByClassName("nav-list")[0];
 
             for (var element of response.titles) 
             {
-                var li = document.createElement('li')
+                var li = document.createElement("li");
 
-                li.appendChild(element)
-                ul.appendChild(li)
+                li.appendChild(document.createTextNode(element));
+                ul.appendChild(li);
             }
         });
