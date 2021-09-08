@@ -28,9 +28,9 @@
     @apply inline-block mx-0.5 px-4 py-1 rounded;
 
     /* colour */
-    @apply bg-gradient-to-b from-green-500 to-blue-900;
-    @apply hover:from-green-800;
-    @apply focus:from-green-700 focus:to-blue-600;
+    @apply bg-gradient-to-b from-gray-600 to-red-900;
+    @apply hover:from-gray-800;
+    @apply focus:from-gray-700 focus:to-red-600;
 
     /* text */
     @apply text-xl font-bold;
@@ -49,7 +49,7 @@
     @apply flex-shrink-0 w-52 my-2 mr-2 px-2;
 
     /* colour */
-    @apply bg-gray-500;
+    @apply bg-red-900;
   }
 
   .content {

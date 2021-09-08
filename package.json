@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "tailwind": "npx tailwindcss -i src/style.css -o dist/tailwind.css",
+    "tailwindwatch": "npx tailwindcss -i src/style.css -o dist/tailwind.css --watch",
     "autoprefixer": "postcss style.css -u autoprefixer --no-map -o style.css",
     "minify": "postcss style.css -u cssnano --no-map -o style.min.css",
     "build": "npm run tailwind",
