@@ -17,12 +17,14 @@
     @apply inline-block mx-0.5 px-4 py-1 rounded;
 
     /* colour */
-    @apply bg-gradient-to-b from-gray-600 to-red-900;
+    @apply bg-gradient-to-b from-gray-600 to-blue-800;
     @apply hover:from-gray-800;
-    @apply focus:from-gray-700 focus:to-red-600;
+    @apply focus:from-gray-700 focus:to-blue-500;
 
     /* text */
     @apply text-xl font-bold;
+    @apply hover:text-blue-300;
+    @apply focus:text-blue-100;
   }
 
   .search-bar {
@@ -33,42 +35,50 @@
   }
 
   .wrapper {
-    @apply flex;
     @apply px-4 sm:px-8 md:px-16 lg:px-48 xl:px-64 2xl:px-96;
     @apply mt-4;
   }
 
-  .nav-column {
-    /* size and position */
-    @apply flex-shrink-0 my-2 mr-2 px-2;
-    @apply lg:w-40 xl:w-52;
-    @apply hidden lg:inline-block;
-
-    /* colour */
-    @apply bg-red-900;
-  }
-
   .content {
     /* size and position */
-    @apply m-2;
+    @apply m-2 mt-4;
+
+    /* text */
+    @apply text-xl;
   }
 
   .section {
+    /* size and positioning */
+    @apply py-8;
+  }
+
+  .section-surtitle {
     /* size and position */
-    @apply pb-4;
+
+    /* colour and styling */
+
+    /* text */
+    @apply font-light text-center;
+
   }
 
   .section-title {
     /* size and position */
-    @apply text-xl font-bold;
+    @apply my-4;
 
     /* colour and styling */
+
+    /* text */
+    @apply text-3xl font-bold text-center;
   }
 
   .paragraph {
-    @apply py-2;
 
     /* text content */
-    @apply text-justify;
+    @apply text-justify leading-9 tracking-wide whitespace-pre-line;
+  }
+
+  .horizontal-rule {
+    @apply mx-auto my-8 w-40;
   }
 }
