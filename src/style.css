@@ -44,7 +44,7 @@
     @apply m-2 mt-4;
 
     /* text */
-    @apply text-xl;
+    @apply text-2xl;
   }
 
   .section {
@@ -58,7 +58,7 @@
     /* colour and styling */
 
     /* text */
-    @apply font-light text-center;
+    @apply font-light text-center text-6xl;
 
   }
 
