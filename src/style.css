@@ -8,10 +8,13 @@
     @apply py-4 sticky top-0;
     @apply px-4 sm:px-8 md:px-16 lg:px-48 xl:px-64 2xl:px-96;
 
+    /* visibility */
+    @apply sm:hidden;
+
     /* colour and styling */
     @apply bg-gray-900 text-white shadow-lg;
   }
-
+  
   .btn-nav {
     /* size and position */
     @apply inline-block mx-0.5 px-4 py-1 rounded;
