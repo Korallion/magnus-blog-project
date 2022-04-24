@@ -22,12 +22,12 @@
     /* colour */
     @apply bg-blue-800;
     @apply hover:bg-gray-800;
-    @apply focus:to-blue-500;
+    @apply focus:bg-blue-600;
 
     /* text */
     @apply text-xl font-bold;
-    @apply hover:text-blue-300;
-    @apply focus:text-blue-100;
+    @apply hover:text-gray-300;
+    @apply focus:text-white;
   }
 
   .search-bar {
