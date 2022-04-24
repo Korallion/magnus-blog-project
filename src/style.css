@@ -9,7 +9,7 @@
     @apply px-4 sm:px-8 md:px-16 lg:px-48 xl:px-64 2xl:px-96;
 
     /* visibility */
-    @apply sm:hidden;
+    @apply sm:invisible md:visible;
 
     /* colour and styling */
     @apply bg-gray-900 text-white shadow-lg;
@@ -20,9 +20,9 @@
     @apply inline-block mx-0.5 px-4 py-1 rounded;
 
     /* colour */
-    @apply bg-gradient-to-b from-gray-600 to-blue-800;
-    @apply hover:from-gray-800;
-    @apply focus:from-gray-700 focus:to-blue-500;
+    @apply bg-blue-800;
+    @apply hover:bg-gray-800;
+    @apply focus:to-blue-500;
 
     /* text */
     @apply text-xl font-bold;
