@@ -1,4 +1,6 @@
 {
-  "titles": [ "Death of a Salesman", "V for Vendetta", "Poopy Scoot" ],
-  "paths": [ "blog1.json", "blog2.json", "blog3.json" ]
+  "data": [ 
+    {"title":"How To Meditate", "fileName":"how-to-meditate"},
+    {"title":"Why Meditate?", "fileName":"why-meditate"}
+  ]
 }

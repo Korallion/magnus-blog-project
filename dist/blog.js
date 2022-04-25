@@ -13,11 +13,16 @@ fetch(myRequest).then(
 
             const ul = document.getElementsByClassName("nav-list")[0];
 
-            for (var element of response.titles) 
+            for (var element of response.data)
             {
                 var li = document.createElement("li");
+                var a = document.createElement("a");
+                var text = document.createTextNode(element.title);
 
-                li.appendChild(document.createTextNode(element));
+                a.appendChild(text);
+                a.href = "https://www.taeyls.com/post?type=blog&name=" + element.fileName;
+
+                li.appendChild(document.createTextNode(element)); 
                 ul.appendChild(li);
             }
         });
