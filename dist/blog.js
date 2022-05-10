@@ -1,5 +1,26 @@
 var myRequest = new Request('./blog-posts/contents.json')
 
+const RequestData = async () => {
+    const myResult = await fetch(myRequest);
+    const resultAsJson = myResult.json();
+    console.log(resultAsJson)
+    debugger;
+}
+
+(async () => await RequestData())();
+
+function createListItem( title, fileName){
+    const a = document.createElement("a");
+    const text = document.createTextNode( title );
+    a.appendChild(text);
+    a.href = `https://www.taeyls.com/post?type=blog&name=${fileName}`;
+
+    const li = document.createElement("li");
+    li.appendChild(a);
+
+    return li;
+}
+
 fetch(myRequest).then(
     function (response) {
         if (!response.ok) {
@@ -11,18 +32,11 @@ fetch(myRequest).then(
     .then(
         function (response) {
 
-            const ul = document.getElementsByClassName("nav-list")[0];
+            return response.data
+                .map(({title, fileName}) => createListItem(title, fileName))
+                .reduce((acc, curr) => {
+                    acc.appendChild(curr);
+                    return acc;
+                }, document.getElementsByClassName("nav-list")[0]);
 
-            for (var element of response.data)
-            {
-                var li = document.createElement("li");
-                var a = document.createElement("a");
-                var text = document.createTextNode(element.title);
-
-                a.appendChild(text);
-                a.href = "https://www.taeyls.com/post?type=blog&name=" + element.fileName;
-
-                li.appendChild(document.createTextNode(element)); 
-                ul.appendChild(li);
-            }
         });
