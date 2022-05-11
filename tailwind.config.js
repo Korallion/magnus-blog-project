@@ -1,5 +1,4 @@
 module.exports = {
-  mode: 'jit',
   content: [
     './**/*.html',
     './**/*.js',
@@ -7,5 +6,6 @@ module.exports = {
   theme: {
     extend: {},
   },
+  variants: {},
   plugins: [],
 }
