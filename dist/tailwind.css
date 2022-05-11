@@ -752,7 +752,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
+.nav-list {
+  /* text */
+  text-align: center;
+}
+
 .post-title {
+  /* size and position */
+  margin-bottom: 1rem;
   /* text */
   font-size: 3rem;
   line-height: 1;
