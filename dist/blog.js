@@ -1,19 +1,12 @@
-var myRequest = new Request('./blog-posts/contents.json')
+var myRequest = new Request('./blog-posts/contents.json');
 
-const RequestData = async () => {
-    const myResult = await fetch(myRequest);
-    const resultAsJson = myResult.json();
-    console.log(resultAsJson)
-    debugger;
-}
-
-(async () => await RequestData())();
-
-function createListItem( title, fileName){
+function createListItem( title, fileName ){
     const a = document.createElement("a");
+    a.href = `post?type=blog&name=${fileName}`;
+    a.className = "link";
+
     const text = document.createTextNode( title );
     a.appendChild(text);
-    a.href = `https://www.taeyls.com/post?type=blog&name=${fileName}`;
 
     const li = document.createElement("li");
     li.appendChild(a);
@@ -21,22 +14,21 @@ function createListItem( title, fileName){
     return li;
 }
 
-fetch(myRequest).then(
-    function (response) {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        return response.json();
-    })
+fetch(myRequest)
     .then(
-        function (response) {
+        (result) => {
+            if (!result.ok) {
+                throw new Error(`HTTP error! status: ${result.status}`);
+            }
 
-            return response.data
+            return result.json();
+        })
+    .then(
+        (result) => {
+            return result.data
                 .map(({title, fileName}) => createListItem(title, fileName))
                 .reduce((acc, curr) => {
                     acc.appendChild(curr);
                     return acc;
                 }, document.getElementsByClassName("nav-list")[0]);
-
         });

@@ -75,10 +75,28 @@
     @apply text-3xl font-bold text-center;
   }
 
-  .paragraph {
+  .post-title {
+    /* text */
+    @apply text-5xl font-bold;
+  }
 
-    /* text content */
-    @apply text-justify leading-9 tracking-wide whitespace-pre-line;
+  .post-date {
+    /* size and position */
+    @apply mb-4;
+
+    /* text */
+    @apply text-sm italic;
+  }
+
+  .paragraph {
+    /* text */
+    @apply text-justify leading-9 tracking-wide whitespace-pre-wrap;
+  }
+
+  .link {
+    /* text */
+    @apply text-blue-500;
+    @apply hover:text-blue-400;
   }
 
   .horizontal-rule {

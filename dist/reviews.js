@@ -1,23 +1,34 @@
-var myRequest = new Request('./review-posts/contents.json')
+var myRequest = new Request('./review-posts/contents.json');
 
-fetch(myRequest).then(
-    function (response) {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+function createListItem( title, fileName ){
+    const a = document.createElement("a");
+    a.href = `post?type=review&name=${fileName}`;
+    a.className = "link";
 
-        return response.json();
-    })
+    const text = document.createTextNode( title );
+    a.appendChild(text);
+
+    const li = document.createElement("li");
+    li.appendChild(a);
+
+    return li;
+}
+
+fetch(myRequest)
     .then(
-        function (response) {
-
-            const ul = document.getElementsByClassName("nav-list")[0];
-
-            for (var element of response.titles) 
-            {
-                var li = document.createElement("li");
-
-                li.appendChild(document.createTextNode(element));
-                ul.appendChild(li);
+        (result) => {
+            if (!result.ok) {
+                throw new Error(`HTTP error! status: ${result.status}`);
             }
+
+            return result.json();
+        })
+    .then(
+        (result) => {
+            return result.data
+                .map(({title, fileName}) => createListItem(title, fileName))
+                .reduce((acc, curr) => {
+                    acc.appendChild(curr);
+                    return acc;
+                }, document.getElementsByClassName("nav-list")[0]);
         });
