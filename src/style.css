@@ -98,7 +98,7 @@
 
   .paragraph {
     /* text */
-    @apply text-justify leading-9 tracking-wide whitespace-pre-wrap;
+    @apply  leading-normal tracking-normal whitespace-pre-wrap;
   }
 
   .link {

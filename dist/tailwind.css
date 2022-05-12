@@ -759,7 +759,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .post-title {
   /* size and position */
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   /* text */
   font-size: 3rem;
   line-height: 1;
@@ -778,9 +778,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .paragraph {
   /* text */
   white-space: pre-wrap;
-  text-align: justify;
-  line-height: 2.25rem;
-  letter-spacing: 0.025em;
+  line-height: 1.5;
+  letter-spacing: 0em;
 }
 
 .link {
