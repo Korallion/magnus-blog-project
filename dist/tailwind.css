@@ -507,8 +507,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  display: none;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .nav-bar {
+    display: block;
+  }
+}
+
+.nav-bar {
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -549,22 +559,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .nav-bar {
-  /* visibility */
-}
-
-@media (min-width: 640px) {
-  .nav-bar {
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 768px) {
-  .nav-bar {
-    visibility: visible;
-  }
-}
-
-.nav-bar {
   /* colour and styling */
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -579,12 +573,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   /* size and position */
   margin-left: 0.125rem;
   margin-right: 0.125rem;
-  display: inline-block;
+  display: none;
   border-radius: 0.25rem;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .btn-nav {
+    display: inline-block;
+  }
+}
+
+.btn-nav {
   /* colour */
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
@@ -617,6 +620,118 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.btn-reveal-burger {
+  /* size and position */
+  position: fixed;
+  left: 1.25rem;
+  top: 1.5rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .btn-reveal-burger {
+    display: none;
+  }
+}
+
+.btn-reveal-burger {
+  /* colour */
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
+.btn-reveal-burger:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.btn-reveal-burger {
+  /* text */
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.btn-reveal-burger:hover {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.btn-reveal-burger:focus {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.burger-wrapper {
+  /* size and position */
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  /* colour and styling */
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.7;
+}
+
+.burger-menu {
+  /* size and position */
+  position: absolute;
+  margin: 1rem;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+.btn-burger {
+  /* size and position */
+  margin: 0.5rem;
+  display: block;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  /* colour */
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
+.btn-burger:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.btn-burger:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.btn-burger {
+  /* text */
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.btn-burger:hover {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.btn-burger:focus {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .wrapper {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -698,17 +813,28 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .wrapper {
-  margin-top: 1rem;
+  margin-top: 5rem;
+}
+
+@media (min-width: 640px) {
+  .wrapper {
+    margin-top: 1rem;
+  }
 }
 
 .\!wrapper {
-  margin-top: 1rem;
+  margin-top: 5rem;
+}
+
+@media (min-width: 640px) {
+  .\!wrapper {
+    margin-top: 1rem;
+  }
 }
 
 .content {
   /* size and position */
   margin: 0.5rem;
-  margin-top: 1rem;
   /* text */
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -759,7 +885,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .post-title {
   /* size and position */
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   /* text */
   font-size: 3rem;
   line-height: 1;
@@ -779,8 +905,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   /* text */
   white-space: pre-wrap;
   text-align: justify;
-  line-height: 2.25rem;
-  letter-spacing: 0.025em;
+  line-height: 1.5;
+  letter-spacing: 0em;
 }
 
 .link {
